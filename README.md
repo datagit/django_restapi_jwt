@@ -34,4 +34,14 @@ curl --location --request POST 'http://127.0.0.1:8000/api/token/' \
 curl --location --request GET 'http://127.0.0.1:8000/api/v1/hello/' \
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI3NjMzNDgxLCJqdGkiOiJiYTcxODRiYmMxODI0NTJlYjBlZmMxMDU4NzQ4YWQ2NSIsInVzZXJfaWQiOjJ9.cbeDZmfRDEaKWh9K1a5T4th4HXASwpgYfX8CCU3V24M' \
 --data-raw ''
+
+# generate file with all packages used in your PC
+pip3 freeze > requirements.txt
+
+# generate file with all packages used in project
+pip3 install pipreqs
+pipreqs ./
+# > INFO: Successfully saved requirements file in ./requirements.txt
+# if we have a file requirements.txt then we can install all packages in this file
+pip3 install -r ./requirements.txt
 ```
