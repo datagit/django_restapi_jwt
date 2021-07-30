@@ -44,4 +44,6 @@ pipreqs ./
 # > INFO: Successfully saved requirements file in ./requirements.txt
 # if we have a file requirements.txt then we can install all packages in this file
 pip3 install -r ./requirements.txt
+
+# Django REST Framework Full Course For Beginners | Build REST API With Django -> https://www.youtube.com/watch?v=B38aDwUpcFc
 ```
